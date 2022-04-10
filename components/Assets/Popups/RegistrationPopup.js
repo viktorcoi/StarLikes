@@ -40,7 +40,7 @@ const RegistrationPopup = (props) => {
                         <input name='password-reg-confirm' type={valueTextConfirm} placeholder='Подтвердите пароль' required></input>
                         <img onClick={() => handleClick(setvalueTextConfirm, valueTextConfirm)} className={styles["view-password"] + ' pos-absolute cursor-pointer transition_0_3'} src='/assets/img/eye.svg' alt='view password'></img>
                     </div>
-                    <ButtonPopup text="Авторизоваться"></ButtonPopup>
+                    <ButtonPopup text="Зарегистрироваться"></ButtonPopup>
                 </form>
                 <div className={styles["for-hint"] + " d-flex items-center"}>
                     <p>У вас есть аккаунт? <span onClick={props.clickAuthorization} className={styles.blue + " cursor-pointer transition_0_3"}>
