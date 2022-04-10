@@ -1,0 +1,29 @@
+@import "vars";
+
+.logo {
+    padding: max(2.2rem, 13.15px) max(1.95rem, 17.78px)  max(2.8rem, 17.28px) max(1.95rem, 16.92px);
+    background-color: @ColorLogo;
+    box-shadow: 0px 20.24px 85.36px @ShadowLogo;
+    border: 2px solid @ColorBorder;
+    font-size: unset;
+    &.footer {
+        border-radius: max(1.2rem, 9.46px) max(1.2rem, 9.46px) 0 0;
+        border-bottom: unset;
+    }
+    &.header {
+        border-top: unset;
+        border-radius: 0 0 max(1.2rem, 9.46px) max(1.2rem, 9.46px);
+    }
+    span {
+        font-size: @25px;
+        text-transform: uppercase;
+        font-weight: 800;
+        width: 5ch;
+        line-height: 102.9%;
+        margin: 0.3rem 0.7rem 0 0;
+    }
+    img {
+        width: max(3.52rem, 32.7px);
+        height: max(3.52rem, 32.7px);
+    }
+}

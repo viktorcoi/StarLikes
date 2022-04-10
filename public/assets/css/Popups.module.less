@@ -1,0 +1,112 @@
+@import "vars";
+
+.bg-popup {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 4;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    background: @BGPopup;
+    opacity: 0;
+    visibility: hidden;
+    &.open {
+        opacity: 1;
+        visibility: visible;
+        .popup {
+            transform: translateY(0);
+        }
+    }
+    .for-close {
+        position: fixed;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: 4;
+    }
+    .popup {
+        min-width: max(38.88em, 368px);
+        padding: 6.06em 5.19em;
+        background: @PopupColor;
+        border: 2px solid @BorderPopup;
+        display: flex;
+        flex-direction: column;
+        z-index: 5;
+        transform: translateY(-100vh);
+        form {
+            flex-direction: column;
+        }
+        .close {
+            width: 1.65em;
+            height: 1.65em;
+            top: 2em; right: 2em;
+            &:hover {
+                filter: brightness(70%);
+            }
+        }
+        .view-password {
+            width: 1.38em 0.88em;
+            top: 0; bottom: 0;
+            margin: auto 0;
+            right: 1.81em;
+            &:hover {
+                filter: brightness(150%);
+            }
+        }
+        .for-choose-popup {
+            margin-bottom: 3.84em;
+            .not-open:hover {
+                color: @BlueText;
+            }
+        }
+        input {
+            width: 100%;
+            padding: max(1.13rem, 14.7px) 3.68rem max(1.13rem, 14.7px) 1.68rem;
+            font-size: @18px;
+            border-radius: @Border;
+            background: @ColorInput;
+            border: 2px solid @BorderPopup;
+            color: @White;
+            font-weight: 500;
+            margin: max(0.41rem, 4px) 0;
+            &::-webkit-input-placeholder {
+                color: @ColorPlaceholder;
+            }
+        }
+        button {
+            width: 100%;
+            margin-top: max(0.41rem, 4px);
+        }
+        .for-hint {
+            flex-direction: column;
+            margin-top: 3em;
+            p {
+                font-size: @18px;
+                font-weight: 400;
+                &.blue {
+                    font-weight: 700;
+                }
+            }
+            p:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+        .blue {
+            color: @BlueText;
+            font-weight: 700;
+            &:hover {
+                color: @White;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:435px) {
+    .bg-popup .popup {
+        min-width: min(90%, 368px);
+        p {
+            text-align: center;
+        }
+    }
+    .create-acc {
+        margin-top: 1rem;
+        display: block;
+    }
+}

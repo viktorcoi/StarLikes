@@ -1,0 +1,54 @@
+@import "vars";
+
+.button-link, .button-popup {
+    border: unset;
+    width: max(20.25rem, 246px);
+    padding: max(1.15rem, 13.7px) 0;
+    color: @White;
+    font-size: unset;
+    font-weight: 700;
+    background: @ButtonGradient;
+    box-shadow: 0px 0px 41px @ShadowButton;
+    border-radius: @Border;
+    justify-content: center;
+    z-index: 1;
+    span {
+        position: relative;
+        z-index: 3;
+        font-size: @20px;
+    }
+    img {
+        width: max(1.65rem, 20.07px);
+        height: max(1.65rem, 20.07px);
+        margin-left: max(0.88rem, 11px);
+    }
+    &:after {
+        position: absolute;
+        content: '';
+        top: 0; left: 0; bottom: 0; right: 0;
+        border-radius: @Border;
+        background: @ButtonHover;
+        transition: opacity 0.5s ease-out;
+        z-index: 2;
+        opacity: 0;
+    }
+    &:hover:after {
+        opacity: 1;
+    }   
+}
+
+.button-popup {
+    padding: max(1.22rem, 13.7px) 0;
+}
+
+@media screen and (max-width: 1159px) {
+    .button-link span, .button-popup span{
+        font-size: 15.9px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .button-link, .button-popup {
+        width: 100%;
+    }
+}

@@ -1,0 +1,48 @@
+@import "vars";
+
+.burger {
+    display: none;
+    width: max(0.86em, 6px);
+    height: max(3.56em, 30px);
+    flex-direction: column;
+    > div {
+        width: 100%;
+        height: max(0.86em, 6px);
+        background-color: @White;
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 0; bottom: 0; right: 0; left: 0;
+            margin: auto;
+        }
+        &:nth-child(3) {
+            bottom: 0;
+        }
+    }
+    &.open {
+        z-index: 6;
+        width: max(3.56em, 30px);
+        > div {
+            height: max(0.31em, 2px);
+            border-radius: 14px;
+            &:nth-child(1) {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .burger {
+        display: flex;
+    }
+}

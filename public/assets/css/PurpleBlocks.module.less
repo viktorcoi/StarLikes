@@ -1,0 +1,100 @@
+@import "vars";
+
+.block-purple, .for-question {
+    border: 2px solid @BorderPopup;
+    background-color: @ColorPupleBlock;
+    box-shadow: 0px 0px max(1.9em, 17px) @ShadowPurpleBlock;
+}
+
+.block-purple {
+    padding: 1.63em;
+    h3 {
+        font-size: @18px;
+        font-weight: 800;
+        margin-left: .69em;
+        p {
+            font-size: @18px;
+            font-weight: 400;
+        }
+    }
+    img {
+        width: 2.75em;
+        height: 2.75em;
+        filter: drop-shadow(0 0 10px @ShadowIMGPurpleBlock);
+    }
+}
+
+.for-question {
+    padding: 1.38em 4.38em;
+    max-height: max(6.69rem, 63px);
+    overflow: hidden;
+    &:not(:last-child) {
+        margin-bottom: max(1.44em, 13.67px);
+    }
+    &:hover {
+        background-color: @ShadowBlockQuestion;
+    }
+    span {
+        font-size: @64px;
+        font-weight: 800;
+        margin-right: max(3.12rem, 20.79px);
+        line-height: 91%;
+        &.margin {
+            visibility: hidden;
+        }
+    }
+    h3 {
+        font-size: @20px;
+        font-weight: 700;
+        margin-right: 2rem;
+        line-height: 146.9%;
+    }
+    img {
+        margin: 0 0 0 auto;
+        width: max(1.56em, 14.81px);
+        height: max(0.88em, 8.29px);
+    }
+    .hidden {
+        margin-top: 1.5rem;
+        font-size: @20px;
+        font-weight: 500;
+        line-height: 146.9%;
+        opacity: 0;
+        height: 0;
+    }
+    &.open {
+        max-height: 700px;
+        img {
+            transform: rotate(180deg);
+        }
+        .hidden {
+            opacity: 1;
+            height: 100%;
+        }
+        &:hover {
+            background-color: @ColorPupleBlock;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .for-question {
+        padding: 1.38em 20px;
+      
+        // h3, .hidden {
+        //     font-size: 13px;
+        // }
+    }   
+} 
+
+@media screen and (max-width: 435px) {
+    .for-question {
+        padding: 1.38em 15px;
+        span {
+            line-height: 115%;
+        }
+        h3, .hidden {
+            font-size: 10.18px;
+        }
+    }    
+}  

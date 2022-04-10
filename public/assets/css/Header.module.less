@@ -1,0 +1,167 @@
+@import "vars";
+@import "mixing";
+
+.header {
+    width: min(92vw, 1215px);
+    .for-navigation {
+        min-width: 57.19em;
+    }
+    nav a {
+        color: @ColorAHeader;
+        font-weight: 500;
+        margin: 0 1.59rem;
+        .right_left_0;
+        &:first-child {
+            color: @White;
+            font-weight: 700;
+            text-shadow: 0px 0px 27px @ShadowText;
+        }
+        &:hover {
+            color: @White;
+        }
+    }
+    .language, button {
+        font-weight: 700;
+        font-size: @20px;
+        min-height: max(3.69rem, 45px);
+        padding: 0 1.25rem;
+        color: @White;
+        background-color: @ColorButtonHeader;
+        border: 2px solid @ColorBorder;
+        box-shadow: 0px 0px 37px @ShadowButtonHeader;
+        min-width: max(6.83rem, 86px);
+        &.two-language {
+            padding: 0 0.9rem;
+            border: 2px solid transparent;
+            border-top: unset;
+            background-color: #594966;
+            box-shadow: unset;
+            transform: translateX(-50%);
+            left: 50%;
+            border-radius: 0 0 7px 7px;
+            min-height: 0em;
+            max-height: 0em;
+            overflow: hidden;
+            visibility: hidden;
+            min-width: max(6.13rem, 76px);
+            &:hover {
+                border: 2px solid @ColorBorder; 
+                border-top: unset;
+            }
+            &.open {
+                min-height: max(3.69rem, 40.59px);
+                max-height: max(3.69rem, 40.59px);
+                visibility: visible;
+            }
+        }
+        &:hover {
+            background-color: unset;
+            box-shadow: unset;
+        }
+    }
+    button {
+        margin-left: 1.13rem;
+        img {
+            width: max(1.65rem, 25px);
+            height: max(1.65rem, 25px);
+            margin-left: .88rem;
+        }
+    }
+    .language img {
+        width: max(1.33rem, 23px);
+        height: max(1.11rem, 20px);
+        margin-right: .84rem;
+        box-shadow: 0 0 15px 3px #A85AC1;;
+    } 
+}
+
+.bg-menu {
+    display: none;
+}
+
+@media screen and (max-width: 1344px) {
+    .header {
+        width: min(92vw, 1050px);
+    } 
+}   
+
+@media screen and (max-width: 1159px) {
+    .header {
+        width: min(92vw, 900px);
+    } 
+}   
+
+@media screen and (max-width: 999px) {
+    .bg-menu {
+        display: flex;
+        position: fixed;
+        top: 96.5px; left: 0; right: 0; bottom: 0;
+        z-index: 5;
+        background-color: @BGPopup;
+        -webkit-backdrop-filter: blur(.1px);
+        backdrop-filter: blur(.1px);
+        filter: blur(30px);
+        visibility: hidden;
+        opacity: 0;
+        &.open {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+    .header .for-navigation {
+        transform: translateX(100%);
+        padding: 3em 0;
+        z-index: 6;
+        min-width: max(40%, 270px);
+        position: fixed;
+        background-color: @PopupColor;
+        flex-direction: column;
+        top: 0; right: 0; bottom: 0;
+        justify-content: unset;
+        border-left: 2px solid @BorderPopup;
+        &.open {
+            transform: translateX(0);
+        }
+        > div, > nav {
+            flex-direction: column;
+        }
+        > nav {
+            a {
+                margin: unset;
+                font-size: 20px;
+                color: @White;
+                margin-bottom: 2rem;
+            }
+        }
+        button {
+            margin: auto;
+            font-size: 20px;
+        }
+        .language p {
+            font-size: 20px;
+        }
+        .for-language {
+            margin: auto;
+        }
+        .two-language {
+            position: unset;
+            margin: auto;
+            transform: translateX(0);
+            justify-content: center;
+            max-width: 7.13rem;
+            margin-bottom: 2rem;
+        }
+    }
+} 
+
+@media screen and (max-width: 899px) {
+    .bg-menu {
+        top: 80.5px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .bg-menu {
+        top: 65.5px;
+    }
+}

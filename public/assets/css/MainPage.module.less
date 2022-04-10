@@ -1,0 +1,281 @@
+@import "vars";
+
+.main-block {
+    margin-bottom: 8.13em;
+    .for-text {
+        margin: 4.5em 3em 0 0;
+    }
+    h1 {
+        width: 11ch;
+    }
+    h2 {
+        width: 34ch;
+        font-size: @20px;
+        line-height: 146.9%;
+        font-weight: 500;
+        margin: max(1.25rem, 15px) 0 3.06rem 0;
+    }
+    .phone {
+        margin-right: -8em;
+        width: max(45.88em, 284px);
+        height: max(45.88em, 284px);
+    }
+    .medal {
+        top: 3.9em;
+        right: -3em;
+    }
+    .flash {
+        bottom: 8em;
+        left: -1.5em;
+    }
+    .smile {
+        bottom: 7em;
+        right: -1em;
+        .for-smile {
+            top: -3.2em;
+            right: -2.1em;
+            font-size: @20px;
+            font-family: 'Poppins';
+            font-weight: 600;
+            justify-content: center;
+            width: 2.81rem;
+            height: 2.81rem;
+            background: #FE3F10;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
+            box-shadow: 0px 4px 8px rgba(192, 2, 3, 0.25);
+        }
+    }
+}
+
+.about-us {
+    margin-bottom: 12.5em;
+    > p {
+        width: 37ch;
+        margin: max(1rem, 15px) 0 5rem 0; 
+        line-height: 146.9%;
+    }
+    .element-us {
+        img {
+            width: max(6.88em, 64px);
+            height: max(8.56em, 79px);
+            filter: drop-shadow(0 0 25px @ShadowIMGUs);
+        }
+        h3 {
+            margin-top: 0.9rem;
+            color: @ColorTextUs;
+            font-size: @18px;
+            font-weight: 800;
+            p {
+                font-size: @18px;
+                width: 19ch;
+                margin-top: 0.7rem;
+                line-height: 117.4%;
+            }
+        }
+    }      
+}
+
+.questions {
+    margin-bottom: 11.25em;
+    > h2 {
+        margin: auto;
+        width: 16ch;
+        text-align: center;
+        margin-bottom: max(1.7rem, 15px);
+    }
+    > p {
+        text-align: center;
+        width: 38ch;
+        margin: 0 auto 4.69rem auto;
+    }
+    .ask {
+        margin-top: 6.81em;
+        justify-content: space-around;
+        h2 {
+            width: 13ch;
+        }
+        a {
+            margin: auto 0 auto 0;
+        }
+    }
+}
+
+.steps-launch > div {
+    background-color: @BGBlockSteps;
+    border: 2px solid @BorderPopup;
+    padding: 4.69em 4.38em 5.5em 4.38em;
+    h2 {
+        margin-bottom: max(1.2rem, 15px);
+        text-align: center;
+    }
+    p {
+        text-align: center;
+        margin-bottom: 4.5em;
+    }
+    .step {
+        margin-bottom: 3.75em;
+        .step-img {
+            margin-bottom: 1.44em;
+            width: max(9.94em, 94px);
+            height: max(8.06em, 77px); 
+            img {
+                width: 100%;
+                height: 100%;
+                filter: drop-shadow(0 0 30px @ShadowCircleSteps);
+            }
+            > div {
+                width: max(6.69em, 63.44px);
+                height: max(6.69em, 63.44px);
+                background-color: @ColorPupleBlock;
+                box-shadow: 0px 0px 30px @ShadowPurpleBlock;
+                border: 2px solid @BorderPopup;
+                z-index: -1;
+                bottom: 0;
+                left: max(2.25em, 23px);
+            }
+        }
+        span {
+            font-size: @64px;
+            font-weight: 800;
+            margin-right: 1.56rem;
+        }
+        h3 {
+            font-weight: 700;
+            font-size: @18px;
+            width: 12ch;
+        }
+    }
+    .img-next {
+        width: max(5.38em, 38px);
+        height: max(1.25em, 8px);
+        margin: auto 0 3.5rem 0;
+    }
+}
+
+@media screen and (max-width: 999px) {
+    .main-block { 
+        .phone {
+            margin: unset;
+        }
+        .medal {
+            top: 3.9em;
+            right: 5em;
+        }
+        .smile {
+            bottom: 7em;
+            right: 7em;
+        }
+    }
+}
+
+@media screen and (max-width: 899px) {
+    .bg-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .bg-img {
+        display: none;
+    }
+    .main-block {
+        a {
+            margin: auto;
+        }
+        h1, h2 {
+            width: 100%;
+        }
+        .for-text {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-right: unset;
+        }
+    }
+    .for-phone {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 673px) { 
+    .about-us {
+        margin-bottom: 7em;
+        .for-elements {
+            flex-wrap: wrap;
+        }
+        .element-us:not(:last-child, :first-child) {
+            margin: 0 2em;
+        }
+        .element-us:last-child {
+            margin: 4em auto 0 auto;
+        }
+    }
+    .questions .ask {
+        flex-wrap: wrap;
+        h2 {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+    }
+    .for-steps {
+        flex-direction: column;
+        align-items: center;
+        .img-next {
+            transform: rotate(90deg) scale(1, -1);
+        }
+    }
+    .steps-launch > div p {
+        margin-bottom: 2em;
+    }
+}
+
+@media screen and (max-width: 528px) { 
+    .about-us {
+        .for-elements {
+            justify-content: center;
+            .element-us {
+                margin: 0 3.5em;
+                &:nth-child(3), &:nth-child(4){
+                    margin-top: 4em;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .medal, .flash, .smile {
+        display: none;
+    }
+    .about-us {
+        .for-elements {
+            justify-content: center;
+            .element-us {
+                margin: auto;
+            }
+        }
+    }
+    .questions {
+        > h2, > p {
+            width: 100%;
+            text-align: start;
+        }
+    }
+    .questions .ask {
+        h2 {
+            text-align: start;
+        }
+    }
+    .about-us {
+        > p {
+            width: 100%;
+        }
+    }
+    .main-block {
+        a {
+            margin: -65px auto 0 auto;
+        }
+    }
+} 

@@ -1,0 +1,39 @@
+@import "vars";
+
+.footer {
+    width: min(92vw, 1215px);
+    p {
+        font-size: @20px;
+        font-weight: 500;
+        color: @ColorTextFooter;
+    }
+}
+
+@media screen and (max-width: 1344px) {
+    .footer {
+        width: min(92vw, 1050px);
+    } 
+}   
+
+@media screen and (max-width: 1159px) {
+    .footer {
+        width: min(92vw, 900px);
+    } 
+}   
+
+@media screen and (max-width: 769px) {
+    .for-button {
+        display: none;
+    } 
+}    
+
+@media screen and (max-width: 579px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        p {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+    } 
+} 
