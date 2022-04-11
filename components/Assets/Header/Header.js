@@ -27,17 +27,20 @@ export function Header(props) {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta name="robots" content="index, follow"></meta>
-                <meta name="og:title" property="og:title" content="SMM СЕРВИС С ВЫСОКИМ КАЧЕСТВОМ УСЛУГ!"/>
+                <meta name="og:title" property="og:title" content="Smm сервис с высоким качеством услуг!"/>
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:title" content="StarLikes"/>
-                <meta name="twitter:description" content="STAR LIKES - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
-                <meta name="twitter:image" content="/assets/img/logo.svg"/>
-                <link rel="canonical" href="/"/>
-                <link rel="icon" href="/assets/img/logo.svg"/>
-                <meta name="description" content="STAR LIKES - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
-                <title>StarLikes</title>
-                <meta property ="og:image" content ="/assets/img/logo.svg"/>
+                <meta name="twitter:description" content="StarLikes - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
+                <meta name="twitter:image" content="/assets/img/logo.ico"/>
                 <meta name="keywords" content="StarLikes, накрутка социальных сетей, smm сервис"/>
+                <link rel="canonical" href="/"/>
+                <link rel="icon" href="/assets/img/logo.ico"/>
+                <meta name="description" content="StarLikes - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
+                <title>StarLikes</title>
+                <meta property="og:type" content="website"></meta>
+                <meta property="og:site_name" content="StarLikes"></meta>
+                <link rel="apple-touch-icon" href="YOUR.SITE/favicon.ico"></link>
+                <meta property="og:image" content="YOUR.SITE/favicon.ico"></meta>
             </Head>
             <header>
                 <div className={styles.header + " d-flex between items-center margin-auto"}>
