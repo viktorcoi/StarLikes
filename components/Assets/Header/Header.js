@@ -17,7 +17,6 @@ export function Header(props) {
     useEffect(() => {
         if (window.innerWidth <= 999) {
             document.body.style.position = menu ? 'fixed' : 'unset';
-            
         }
     })
 
