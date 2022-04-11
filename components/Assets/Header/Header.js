@@ -28,7 +28,7 @@ export function Header(props) {
                 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
                 <meta name="robots" content="index, follow"></meta>
-                <meta name="og:title" property="og:title" content="STAR LIKES - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
+                <meta name="og:title" property="og:title" content="SMM СЕРВИС С ВЫСОКИМ КАЧЕСТВОМ УСЛУГ!"/>
                 <meta name="twitter:card" content="summary"/>
                 <meta name="twitter:title" content="StarLikes"/>
                 <meta name="twitter:description" content="STAR LIKES - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
@@ -37,6 +37,7 @@ export function Header(props) {
                 <link rel="icon" href="/assets/img/logo.svg"/>
                 <meta name="description" content="STAR LIKES - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
                 <title>StarLikes</title>
+                <meta property ="og:image" content ="/assets/img/logo.svg"/>
             </Head>
             <header>
                 <div className={styles.header + " d-flex between items-center margin-auto"}>
