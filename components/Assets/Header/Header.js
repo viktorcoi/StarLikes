@@ -37,6 +37,7 @@ export function Header(props) {
                 <meta name="description" content="STAR LIKES - это интернет магазин, где люди могут купить все виды SMM - услуг на различные социальные сети."/>
                 <title>StarLikes</title>
                 <meta property ="og:image" content ="/assets/img/logo.svg"/>
+                <meta name="keywords" content="StarLikes, накрутка социальных сетей, smm сервис"/>
             </Head>
             <header>
                 <div className={styles.header + " d-flex between items-center margin-auto"}>
