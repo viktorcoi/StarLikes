@@ -1,5 +1,6 @@
 {
-  "name": "phattplumm",
+   "homepage": "http://viktorcoi.github.io/starLikes",
+  "name": "starLikes",
   "private": true,
   "scripts": {
     "dev": "next dev",
