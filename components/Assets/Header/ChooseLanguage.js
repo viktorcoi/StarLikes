@@ -30,11 +30,11 @@ const ChooseLanguage = (props) => {
     return (
         <div className={props.mainClass + ' pos-relative'}>
             <div onClick={() => OpenChoose(choose)} className={props.className + " d-flex items-center border-7px cursor-pointer transition_0_3"}>
-                <img alt='language' src={`/assets/img/${valueRU}.svg`}></img>
+                <img alt='language' src={`/assets/img/${valueRU.toLowerCase()}.svg`}></img>
                 <p>{valueRU}</p>
             </div>
             <div onClick={() => {handleClick(), OpenChoose(choose)}} className={props.className + " d-flex pos-absolute items-center cursor-pointer transition_0_3 " + props.class + " " + (choose ? props.addClass : "")}>
-                <img alt='language' src={`/assets/img/${valueEN}.svg`}></img>
+                <img alt='language' src={`/assets/img/${valueEN.toLowerCase()}.svg`}></img>
                 <p>{valueEN}</p>     
             </div>
         </div>

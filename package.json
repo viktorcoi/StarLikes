@@ -1,7 +1,7 @@
 {
   "name": "starlikes",
   "private": true,
-  "homepage": "http://viktorcoi.github.io/starLikes",
+  "homepage": "https://viktorcoi.github.io/StarLikes/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
